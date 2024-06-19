@@ -1,0 +1,70 @@
+random_seed: 45
+
+#stanza_model_cache
+stanza_dir: /data/huangjiahao/stanza_models
+huggingface_dir: /data/huangjiahao/huggingface_models
+pairs: ["i'm", "i'd", "it's", "i've", "they've", "you've", "you'll", "i'll", "that's", "you're", "pro's", "what's"]
+
+# path 
+lang: en
+json_path: data/dataset/jsons
+preprocessed_dir: data/preprocessed
+target_dir: data/save
+aggregate_method: "mean"
+
+num_heads: 8
+plm_abla: False
+
+bert-en:
+  bert_path: /data/huangjiahao/huggingface_models/roberta-base
+  #bert_path: roberta-large
+  cls: '<s>'
+  sep: '</s>'
+  unk: '<unk>'
+  pad: '<pad>'
+
+bert-zh:
+  bert_path: hfl/chinese-roberta-wwm-ext
+  cls: '[CLS]'
+  sep: '[SEP]'
+  unk: '[UNK]'
+  pad: '[PAD]'
+
+unkown_tokens: '🍔—🐛🙉🙄😎🔨🏆🆔👌👀🥺冖🌚🙈😭🍎😅💩尛硌糇💰🐴🙊💯⭐🐶🐟🙏😄🏻📶🐮🍺❌🤔🐍🐸🙃🤣🏆😂🌚╮▽╭☞'
+max_length: 512
+
+# parameter 
+Trainer:
+  accelerator: 'gpu'
+  devices: [3]
+  accumulate_grad_batches: 2
+
+dropout: 0.2
+epoch_size: 20
+batch_size: 2
+
+
+polarity_dict:
+  O: 0
+  pos: 1
+  neg: 2
+  other: 3
+
+loss_weight:
+  ent: 2
+  rel: 5
+  pol: 1
+
+schedulers:
+  warmupCosineDecay:
+    warmup_epochs: 3
+    start_lr: 5.0e-5
+    intermediate_lr: 1.0e-4
+    end_lr: 1.0e-7
+  
+    
+ModelCfg:
+  node_gat_layer_num: 4
+  edge_gat_layer_num: 12
+  sen_gat_layer_num: 2
+  gat_layer_num: 6
