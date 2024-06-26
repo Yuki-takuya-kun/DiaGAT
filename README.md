@@ -1,5 +1,4 @@
-# Dialogue Graph Attention Network in
-Conversational Aspect-base Sentiment Analysis
+# Dialogue Graph Attention Network in Conversational Aspect-base Sentiment Analysis
 
 This repository contains data and code for the paper: Dialogue Graph Attention Network in Conversational Aspect-base Sentiment Analysis
 
