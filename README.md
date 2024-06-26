@@ -6,23 +6,23 @@ This repository contains data and code for the paper: Dialogue Graph Attention N
 ## Directory structure
 <pre>
 DiaGAT					root directory
-├── data					data directory
-│        └── dataset				dataset directory
-│        	      ├──jsons_en			english dataset directory
-│        	      │	├──train.json		english training dataset
-│        	      │	├──valid.json		english validation dataset
-│        	      │	└──test.json		english test dataset
-│        	      └──jsons_zh			chinese dataset directory
-│        	      	├──train.json		english training dataset
-│        	      	├──valid.json		english validation dataset
-│        	       	└──test.json		english test dataset
+├── data				data directory
+│     └── dataset			dataset directory
+│           ├──jsons_en			english dataset directory
+│           │	├──train.json		english training dataset
+│           │	├──valid.json		english validation dataset
+│           │	└──test.json		english test dataset
+│           └──jsons_zh			chinese dataset directory
+│        	├──train.json		english training dataset
+│             	├──valid.json		english validation dataset
+│      	       	└──test.json		english test dataset
 └── src					source code of the DiaGAT model
-         ├── common.py
-         ├── preprocess.py			encode the dialogue into dialogue graph
-         ├── dataloader.py			load the dialogue graph into dataset
-         ├── model.py			define architecture of the DiaGAT model
-         ├── metrics.py			evaluate the behavior of the model
-         └── config.yaml			configuration file to setting many hyper parameters 			
+      ├── common.py
+      ├── preprocess.py			encode the dialogue into dialogue graph
+      ├── dataloader.py			load the dialogue graph into dataset
+      ├── model.py			define architecture of the DiaGAT model
+      ├── metrics.py			evaluate the behavior of the model
+      └── config.yaml			configuration file to setting many hyper parameters 			
 	
 </pre>
 
