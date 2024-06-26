@@ -44,8 +44,10 @@ Our model needs packages to run:
 
 ## Quick Start
 - If you are trainning the model in the first time, you need to initialize the dataset by
+
 `python main.py -d True`
 - Or you can trainning the model directly by
+
 `python main.py`
 
 ## Configuration
